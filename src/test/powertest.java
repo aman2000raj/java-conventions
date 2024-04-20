@@ -1,26 +1,37 @@
-package powerpackage;
+package test;
 
-
-import org.junit.Test;
+import main.java.powerpackage.powerFinder;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class powertest {
     @Test
-    public void one_raised_to_one_is_onew() {
-        assert powerfinder.OF(1,1) == 1;
+    public void oneRaisedToPowerOneIsOne() {
+        powerFinder calculator = new powerFinder();
+        assertEquals(1, calculator.toThePowerOf(1,1));
     }
 
     @Test
-    public void twoRaised_to_one_is_2() {
-        assert powerfinder.OF(2,1) == 2;
+    public void twoRaisedToPowerOneIsTwo() {
+        powerFinder calculator = new powerFinder();
+        assertEquals(2, calculator.toThePowerOf(2,1));
     }
 
     @Test
-    public void two_power_2_is_4() {
-        assert powerfinder.OF(2, 2) == 4;
+    public void twoRaisedToPowerTwoIsFour() {
+        powerFinder calculator = new powerFinder();
+        assertEquals(4, calculator.toThePowerOf(2,2));
     }
 
     @Test
-    public void power_of_2_and_3_Is_SIX() {
-        assert powerfinder.OF(3, 2) == 3*3;
+    public void twoRaisedToPowerThreeIsEight() {
+        powerFinder calculator = new powerFinder();
+        assertEquals(8, calculator.toThePowerOf(2,3));
+    }
+
+    @Test
+    public void threeRaisedToPowerThreeIsTwentySeven() {
+        powerFinder calculator = new powerFinder();
+        assertEquals(27, calculator.toThePowerOf(3,3));
     }
 }
